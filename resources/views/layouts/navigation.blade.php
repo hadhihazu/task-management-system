@@ -15,6 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('task-manager')" :active="request()->routeIs('task-manager')">
+                        {{ __('Manage Task') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -36,6 +39,10 @@
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
+                        </x-dropdown-link>
+
+                        <x-dropdown-link :href="route('task-manager')">
+                            {{ __('Manage Task') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->
